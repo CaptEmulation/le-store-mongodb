@@ -1,0 +1,27 @@
+{
+  "name": "le-store-mongodb",
+  "version": "0.0.1",
+  "description": "MongoDB plugin for greenlock",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "mongoose": "^5.4.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node tests/basic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaptEmulation/le-store-mongodb.git"
+  },
+  "author": "John Dean <john.holmes.dean@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaptEmulation/le-store-mongodb/issues"
+  },
+  "homepage": "https://github.com/CaptEmulation/le-store-mongodb#readme"
+}
