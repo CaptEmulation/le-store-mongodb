@@ -99,7 +99,6 @@ var tests = [
     , receipt: { foo: 'bar' }
     };
     return leStore.accounts.setAsync(goodGuy, account).then(function (account) {
-      console.log('test=>', account)
       if (!account || !account.id || !account.email) {
         throw new Error('accounts.set should return the object with its new `id` attached');
       }
