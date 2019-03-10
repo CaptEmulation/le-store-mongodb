@@ -1,6 +1,6 @@
 {
   "name": "le-store-mongodb",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "MongoDB plugin for greenlock",
   "main": "index.js",
   "directories": {
