@@ -64,25 +64,24 @@ exports.create = function create(options) {
   }
 
   function certificateQuery(opts) {
-    const possible = [];
-    if (opts.email) {
-      possible.push({
-        email: opts.email,
-      });
-    }
-    if (opts.accountId) {
-      possible.push({
-        accountId: opts.accountId,
-      });
-    }
     if (opts.domains && opts.domains.length) {
-      possible.push({
-        domains: { $in: opts.domains },
-      });
+      return {
+        domains: { $in: opts.domains }
+      };
     }
-    return {
-      $or: possible,
-    };
+
+    if (opts.accountId) {
+      return {
+        accountId: opts.accountId,
+      };
+    }
+
+    if (opts.email) {
+      return {
+        email: opts.email,
+      };
+    }
+    throw new Error('no query available for', opts);
   }
 
   function certificatetResults(opts, cb) {
